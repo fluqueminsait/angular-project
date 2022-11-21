@@ -1,0 +1,34 @@
+nav {
+    display: flex;
+
+    ul {
+      width: 100vw;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      
+      li {
+        margin: 0 1rem;
+        font-size: x-large;
+        box-sizing:content-box;
+        transition: all 0.3s;
+        
+        &:hover{
+          transform:scale(1.1);
+        }
+        a {
+          transition: all 0.3s;
+          &:hover {
+            color: yellow;
+          }
+        }
+      }
+    }
+  }
+  img {
+    width: 150px;
+    height: 50px;
+    margin: 15px;
+    // border: 2px solid white;
+  }
