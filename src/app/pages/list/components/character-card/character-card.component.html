@@ -1,6 +1,9 @@
+
 <section class="card">
-    <figure class="figure-character" (click)="navigateToDetail(characterValue)">
-        <img src="{{characterValue.image}}" alt="">
-        <p>{{characterValue.name}} </p>
-    </figure>
+  <figure class="card__figure" (click)="navigateToDetail(characterValue)">  
+    <h3 class="card__figure__h3">{{ characterValue.name }}</h3>
+    <div class="card__figure__img-container">
+      <img class="card__figure__img-container__img" src="{{ characterValue.image }}" alt="{{ characterValue.name }}" />
+    </div>
+  </figure>
 </section>

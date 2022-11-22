@@ -1,0 +1,7 @@
+<div
+  *ngIf="(books$ | async) as books"
+  class="list-container"
+>
+  <app-mixing-card *ngFor="let book of books" [book]="book"></app-mixing-card>
+</div>
+

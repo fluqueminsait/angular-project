@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeModule } from './pages/home/home.module';
-import { ListModule } from './pages/list/list.module';
-import { DetailModule } from './pages/detail/detail.module';
+
 
 
 const routes: Routes = [
@@ -19,7 +17,13 @@ loadChildren: () => import('./pages/list/list.module').then((m) => m.ListModule)
   },
   { path: 'crud',
   loadChildren: () => import('./pages/crud/crud.module').then((m) => m.CrudModule)
-  }
+  },
+  { path:'my-characters',
+  loadChildren: () => import('./pages/my-characters/my-Characters.module').then((m) => m.MyCharactersModule)
+  },
+  { path: 'show-mixing',
+loadChildren: () => import('./pages/show-mixing/show-mixing.module').then((m) => m.ShowMixingModule)}
+
 ];
 
 @NgModule({

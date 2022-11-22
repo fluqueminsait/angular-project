@@ -1,6 +1,12 @@
-<p>detail works!</p>
-<p>{{characterValue.name}}</p>
-<img src="{{characterValue.image}}" alt="">
-<p>{{characterValue.species}}</p>
-<p>{{characterValue.status}}</p>
-<p>{{characterValue.location.name}}</p>
+
+<section class="card">
+  <figure class="card__figure">
+    <h3 class="card__figure__h3">{{ characterValue.name }}</h3>
+    <div class="card__figure__img-container">
+      <img src="{{ characterValue.image }}" alt="{{ characterValue.name }}" />
+    </div>
+    <p class="card__figure__p">{{ characterValue.species }}</p>
+    <p class="card__figure__p">{{ characterValue.status }}</p>
+    <p class="card__figure__p">{{ characterValue.location.name }}</p>
+  </figure>
+</section>

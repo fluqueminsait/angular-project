@@ -1,0 +1,21 @@
+<div class="searcher">
+  <input type="text" [(ngModel)]="filter" class="searcher__input">
+</div>
+<div *ngIf="myCharacters && myCharacters.length > 0" class="list-container">
+  <section class="card" *ngFor="let myCharacter of (myCharacters | filterPipe: filter: 'characterNameForm')">
+    <figure class="card__figure">
+      <h3 class="card__figure__h3">{{ myCharacter.characterNameForm }}</h3>
+      <div class="card__figure__img-container">
+        <img
+          class="card__figure__img-container__img"
+          src="{{ myCharacter.characterImageForm }}"
+          alt="{{ myCharacter.characterNameForm }}"
+        />
+      </div>
+      <button class="card__figure__btn" (click)="editCharacter(myCharacter)">Editar Personaje</button>
+    </figure>
+  </section>
+</div>
+
+
+

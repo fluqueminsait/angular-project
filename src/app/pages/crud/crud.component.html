@@ -1,1 +1,37 @@
-<p>crud works!</p>
+<section class="form-container">
+  <h2 class="form-container__h2">CREA A TUS PERSONAJES</h2>
+  <form
+    [formGroup]="characterForm"
+    (ngSubmit)="onSubmit()"
+    class="form-container__form"
+  >
+    <div class="form-container__form__div">
+      <label for="characterNameForm" class="form-container__form__div__label"
+        >Ponle nombre a tu Personaje</label
+      >
+      <input
+        type="text"
+        placeholder="NOMBRE DE TU PERSOANAJE"
+        id="characterNameForm"
+        formControlName="characterNameForm"
+        class="form-container__form__div__input"
+      />
+    </div>
+    <div class="form-container__form__div">
+      <label for="characterImageForm" class="form-container__form__div__label"
+        >URL de la foto de tu Personaje</label
+      >
+      <input
+        type="text"
+        placeholder="URL foto de tu Personaje"
+        id="characterImageForm"
+        formControlName="characterImageForm"
+        class="form-container__form__div__input"
+      />
+    </div>
+    <div class="form-container__form__div-btn-container">
+      <button class="form-container__form__div-btn-container__btn" type="submit">CREAR</button>
+      <button (click)="delete()"  class="form-container__form__div-btn-container__btn delete">Borrar</button>
+    </div>
+  </form>
+</section>

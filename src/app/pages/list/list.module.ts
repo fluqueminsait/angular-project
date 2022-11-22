@@ -3,20 +3,20 @@ import { CommonModule } from '@angular/common';
 import { ListRoutingModule } from './list-routing.module';
 import { ListComponent } from './list.component';
 import { CharacterCardComponent } from './components/character-card/character-card.component';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { FilterPipeModule } from 'src/app/pipes/pipe.module';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
     declarations: [
         ListComponent,
-        CharacterCardComponent,
+        CharacterCardComponent
     ],
     imports: [
         CommonModule,
         ListRoutingModule,
-        ReactiveFormsModule,
-        FormsModule,
-        FilterPipeModule
+        FilterPipeModule,
+        FormsModule, 
     ]
 })
 export class ListModule {}
