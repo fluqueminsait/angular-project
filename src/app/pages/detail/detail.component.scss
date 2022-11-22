@@ -1,6 +1,12 @@
 @import "../list/components/character-card/character-card.component.scss";
 
+.detail-container{
+    display: flex;
+    justify-content: center;
+}
+
 .card__figure__p{
     margin: 5px;
     font-weight: bold;
 }
+

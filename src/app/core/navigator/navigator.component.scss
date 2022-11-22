@@ -1,6 +1,8 @@
+$special-font: 'Rubik Distressed', cursive;
+
 nav {
     display: flex;
-
+  
     ul {
       width: 100vw;
       list-style: none;
@@ -19,6 +21,7 @@ nav {
         }
         a {
           transition: all 0.3s;
+          font-family: $special-font;
           &:hover {
             color: yellow;
           }
@@ -32,3 +35,4 @@ nav {
     margin: 15px;
     // border: 2px solid white;
   }
+

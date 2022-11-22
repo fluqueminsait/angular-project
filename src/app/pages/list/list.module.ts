@@ -5,6 +5,7 @@ import { ListComponent } from './list.component';
 import { CharacterCardComponent } from './components/character-card/character-card.component';
 import { FilterPipeModule } from 'src/app/pipes/pipe.module';
 import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material';
 
 
 @NgModule({
@@ -17,6 +18,7 @@ import { FormsModule } from '@angular/forms';
         ListRoutingModule,
         FilterPipeModule,
         FormsModule, 
+        MatButtonModule,
     ]
 })
 export class ListModule {}

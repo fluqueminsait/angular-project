@@ -56,5 +56,10 @@ export class ApiCallService {
   public deleteCharacter(id: any){
     return this.http.delete('http://localhost:3000/newCharacters/' + id);
   }
+
+  public getAllCharactersRM(page: any):Observable<any>{
+    return this.http.get(`https://rickandmortyapi.com/api/character?page=${page}`)
+  }
  
+  
 }

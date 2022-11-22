@@ -1,3 +1,4 @@
+
 <section class="form-container">
   <h2 class="form-container__h2">CREA A TUS PERSONAJES</h2>
   <form
@@ -30,8 +31,8 @@
       />
     </div>
     <div class="form-container__form__div-btn-container">
-      <button class="form-container__form__div-btn-container__btn" type="submit">CREAR</button>
-      <button (click)="delete()"  class="form-container__form__div-btn-container__btn delete">Borrar</button>
+      <button mat-raised-button type="submit">SUBMIT</button>
+      <button mat-raised-button *ngIf="myNewCharacterID !== ''" (click)="delete()" >Borrar</button>
     </div>
   </form>
 </section>

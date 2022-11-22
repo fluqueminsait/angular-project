@@ -10,13 +10,11 @@ import { FooterComponent } from './core/footer/footer.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
     NavigatorComponent,
     FooterComponent,
-   
   ],
 
   imports: [

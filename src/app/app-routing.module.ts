@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-
-
 const routes: Routes = [
   {
     path: '',
@@ -10,24 +8,39 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/home/home.module').then((m) => m.HomeModule),
   },
-  {path: 'list',
-loadChildren: () => import('./pages/list/list.module').then((m) => m.ListModule)},
-  { path: 'detail',
-  loadChildren: () => import('./pages/detail/detail.module').then((m) => m.DetailModule)
+  {
+    path: 'list',
+    loadChildren: () =>
+      import('./pages/list/list.module').then((m) => m.ListModule),
   },
-  { path: 'crud',
-  loadChildren: () => import('./pages/crud/crud.module').then((m) => m.CrudModule)
+  {
+    path: 'detail',
+    loadChildren: () =>
+      import('./pages/detail/detail.module').then((m) => m.DetailModule),
   },
-  { path:'my-characters',
-  loadChildren: () => import('./pages/my-characters/my-Characters.module').then((m) => m.MyCharactersModule)
+  {
+    path: 'crud',
+    loadChildren: () =>
+      import('./pages/crud/crud.module').then((m) => m.CrudModule),
   },
-  { path: 'show-mixing',
-loadChildren: () => import('./pages/show-mixing/show-mixing.module').then((m) => m.ShowMixingModule)}
-
+  {
+    path: 'my-characters',
+    loadChildren: () =>
+      import('./pages/my-characters/my-Characters.module').then(
+        (m) => m.MyCharactersModule
+      ),
+  },
+  {
+    path: 'show-mixing',
+    loadChildren: () =>
+      import('./pages/show-mixing/show-mixing.module').then(
+        (m) => m.ShowMixingModule
+      ),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

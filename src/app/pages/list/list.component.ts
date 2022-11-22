@@ -4,7 +4,6 @@ import { Router} from '@angular/router';
 import { characterRM } from 'src/app/models/characterRM-interface';
 
 
-
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
@@ -12,27 +11,38 @@ import { characterRM } from 'src/app/models/characterRM-interface';
 })
 export class ListComponent implements OnInit {
   public characters: characterRM[] = [];
-  filter: string;
-  public page: any;
-  constructor(private apiCallService: ApiCallService, private router : Router,) {
+  public filter: string;
+  public page: number;
+  public numberPage: number;
+
+  constructor(private apiCallService: ApiCallService, private router : Router) {
     this.filter = "";
- 
+    this.page = 1;
+    this.numberPage = 0;
   }
 
   ngOnInit(): void {
-    this.subscribeCharacter()
+    this.getAllCharacters()
   }
 
-  private subscribeCharacter(): void{
-    if(this.router.url === "/list") {
-      this.apiCallService.getCharacters().subscribe((data: any) => {
-        this.characters = data.results
+  public getAllCharacters(){
+    for(let i = 1 ; i <= 40; i++){
+      this.page = i;
+      this.apiCallService.getAllCharactersRM(this.page).subscribe((data:any) => {
+        data.results.map((character: any) => {
+          this.characters = [...this.characters, character]
+        })
       })
     }
-   
+  }
+  public nextPage() {
+    this.numberPage += 20;
+    console.log(this.numberPage)
   }
 
-  public onSubmit() {
-   
-  }
+  public prevPage() {
+    if(this.numberPage > 1){
+      this.numberPage -= 20;
+    }
+}
 }
