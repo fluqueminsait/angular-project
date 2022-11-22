@@ -1,3 +1,5 @@
+$secular-font: 'Secular One', sans-serif;
+
 .card{
     width: 400px;
   display: flex;
@@ -41,6 +43,8 @@
 
 .card__figure__h3{
     margin-top: 20px;
+    font-family: $secular-font;
+    text-align: center;
 }
 
 
